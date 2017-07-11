@@ -6,3 +6,6 @@ userdebug_or_eng(`
 set_prop(system_app, vendor_bluetooth_prop)
 
 allow system_app vendor_default_prop:file { open read getattr };
+
+#allow system app to interact with the esepowermanager
+hal_client_domain(system_app, hal_esepowermanager)
